@@ -34,6 +34,16 @@ public class CodeExceptions {
 	public static final int WAREHOUSE_DIRECT_ORIGIN_NOT_FOUND = 313;
 	public static final int WAREHOUSE_DIRECT_DESTINATION_NOT_FOUND = 314;
 	
+	public static final int WAREHOUSE_ADAPTER_NOT_FOUND = 315;
+	public static final int WAREHOUSE_ADAPTER_TRANSFER_NOT_FOUND = 316;
+	public static final int WAREHOUSE_ADAPTER_ORIGIN_NOT_FOUND = 317;
+	public static final int WAREHOUSE_ADAPTER_DESTINATION_NOT_FOUND = 318;
+	
+	public static final int WAREHOUSE_DEVICE_NOT_FOUND = 319;
+	public static final int WAREHOUSE_DEVICE_TRANSFER_NOT_FOUND = 320;
+	public static final int WAREHOUSE_DEVICE_ORIGIN_NOT_FOUND = 321;
+	public static final int WAREHOUSE_DEVICE_DESTINATION_NOT_FOUND = 322;
+	
 	
 	public static final int MANUFACTER_NOT_FOUND = 400;
 	public static final int MANUFACTER_EXISTS = 401;
@@ -99,6 +109,16 @@ public class CodeExceptions {
 			put(WAREHOUSE_DIRECT_TRANSFER_NOT_FOUND, "The transfer warehouse-direct does not exist");
 			put(WAREHOUSE_DIRECT_ORIGIN_NOT_FOUND, "The relationship warehouse-direct of origin does not exist");
 			put(WAREHOUSE_DIRECT_DESTINATION_NOT_FOUND, "The relationship warehouse-direct of destination does not exist");
+			
+			put(WAREHOUSE_ADAPTER_NOT_FOUND, "The adapter does not exist");
+			put(WAREHOUSE_ADAPTER_TRANSFER_NOT_FOUND, "The transfer warehouse-adapter does not exist");
+			put(WAREHOUSE_ADAPTER_ORIGIN_NOT_FOUND, "The relationship warehouse-adapter of origin does not exist");
+			put(WAREHOUSE_ADAPTER_DESTINATION_NOT_FOUND, "The relationship warehouse-adapter of destination does not exist");
+			
+			put(WAREHOUSE_DEVICE_NOT_FOUND, "The device does not exist");
+			put(WAREHOUSE_DEVICE_TRANSFER_NOT_FOUND, "The transfer warehouse-device does not exist");
+			put(WAREHOUSE_DEVICE_ORIGIN_NOT_FOUND, "The relationship warehouse-device of origin does not exist");
+			put(WAREHOUSE_DEVICE_DESTINATION_NOT_FOUND, "The relationship warehouse-device of destination does not exist");
 			
 			put(MANUFACTER_NOT_FOUND, "The manufacturer does not exist");
 			put(MANUFACTER_EXISTS, "The manufacturer exists");

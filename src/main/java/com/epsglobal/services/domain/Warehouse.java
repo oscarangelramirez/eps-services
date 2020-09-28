@@ -32,4 +32,7 @@ public class Warehouse {
 	
 	@OneToMany(mappedBy = "warehouse")
 	private List<WarehouseCarrier> warehouseCarriers;
+	
+	@OneToMany(mappedBy = "warehouse")
+	private List<WarehouseDirect> warehouseDirects;
 }
