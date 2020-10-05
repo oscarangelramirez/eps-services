@@ -31,7 +31,7 @@ public class WarehouseAdapterTransfer {
 	@Enumerated(value = EnumType.STRING)
 	private Status status;
 
-	@ManyToMany(mappedBy = "warehouseAdaptersTransfers")
+	@ManyToMany(mappedBy = "warehouseAdapterTransfers")
 	private List<WarehouseAdapter> warehouseAdapters;
 
 	@OneToOne

@@ -77,6 +77,9 @@ public class CodeExceptions {
 	public static final int ROL_PERMISSION_NOT_FOUND = 1300;
 	public static final int ROL_PERMISSION_EXISTS = 1301;
 	
+	
+	public static final int BACKUP_NOT_FOUND = 1400;
+	public static final int BACKUP_EXISTS = 1401;
 	public static Map<Integer, String> ERRORS = new HashMap<Integer, String>() {
 		private static final long serialVersionUID = 1L;
 		{
@@ -151,6 +154,9 @@ public class CodeExceptions {
 			
 			put(ROL_PERMISSION_NOT_FOUND, "The permission does not exist");
 			put(ROL_PERMISSION_EXISTS, "The permission exists");
+			
+			put(BACKUP_NOT_FOUND, "The backup does not exist");
+			put(BACKUP_EXISTS, "The backup exists");			
 		}
 	};
 }

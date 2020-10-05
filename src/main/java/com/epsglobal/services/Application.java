@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.epsglobal.services.dataaccess")
 @EntityScan(basePackages = "com.epsglobal.services.domain")
 public class Application {
-	//comentario de prueba
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
