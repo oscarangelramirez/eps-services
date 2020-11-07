@@ -30,7 +30,7 @@ public class FileApplicationService {
 	
 	@Autowired
 	public FileApplicationService(FileStorageProperties fileStorageProperties) {
-		this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDirectory()).toAbsolutePath().normalize();
+		fileStorageLocation = Paths.get(fileStorageProperties.getUploadDirectory()).toAbsolutePath().normalize();
 	}
 	
 	public GetFileResponse get(Long id) throws NotFoundException, ErrorException  {
@@ -58,7 +58,7 @@ public class FileApplicationService {
 	public AddFileResponse add(MultipartFile request) throws ErrorException {
 		try {
 			String fileName = StringUtils.cleanPath(request.getOriginalFilename());
-			Path path = this.fileStorageLocation.resolve(fileName);
+			Path path = fileStorageLocation.resolve(fileName);
 			Files.copy(request.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
 			
 			File file = new File();

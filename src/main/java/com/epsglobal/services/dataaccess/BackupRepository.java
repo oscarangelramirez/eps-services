@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.epsglobal.services.domain.Backup;
 
 @Repository
-public interface DatabaseRepository extends JpaRepository<Backup, Long> {
+public interface BackupRepository extends JpaRepository<Backup, Long> {
 	Optional<Backup> findByName(String name);
 
 }

@@ -27,4 +27,7 @@ public class Backup {
 	
 	@Column(nullable = false, length = 255)
 	private String path;
+	
+	@Column(nullable = true, length = 1000)
+	private String comments;
 }

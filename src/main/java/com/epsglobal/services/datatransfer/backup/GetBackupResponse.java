@@ -1,4 +1,4 @@
-package com.epsglobal.services.datatransfer.database;
+package com.epsglobal.services.datatransfer.backup;
 
 import java.util.Date;
 
@@ -18,11 +18,15 @@ public class GetBackupResponse {
 
 	@JsonView
 	private String path;
+	
+	@JsonView
+	private String comments;
 
 	public GetBackupResponse(Backup backup) {
-		this.id = backup.getId();
-		this.name = backup.getName();
-		this.date = backup.getDate();
-		this.path = backup.getPath();
+		id = backup.getId();
+		name = backup.getName();
+		date = backup.getDate();
+		path = backup.getPath();
+		comments = backup.getComments();
 	}
 }

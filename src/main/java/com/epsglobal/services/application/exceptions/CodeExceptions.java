@@ -80,6 +80,8 @@ public class CodeExceptions {
 	
 	public static final int BACKUP_NOT_FOUND = 1400;
 	public static final int BACKUP_EXISTS = 1401;
+	public static final int BACKUP_ERROR = 1402;
+	
 	public static Map<Integer, String> ERRORS = new HashMap<Integer, String>() {
 		private static final long serialVersionUID = 1L;
 		{
@@ -156,7 +158,8 @@ public class CodeExceptions {
 			put(ROL_PERMISSION_EXISTS, "The permission exists");
 			
 			put(BACKUP_NOT_FOUND, "The backup does not exist");
-			put(BACKUP_EXISTS, "The backup exists");			
+			put(BACKUP_EXISTS, "The backup exists");
+			put(BACKUP_ERROR, "The backup could not be completed, please try again");
 		}
 	};
 }
