@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -40,4 +42,7 @@ public class WarehouseAdapterInput {
 	@OneToOne
 	private User user;
 
+	@ManyToOne
+	@JoinColumn(name = "warehouse_adapter_id")
+	private WarehouseAdapter warehouseAdapter;
 }

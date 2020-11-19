@@ -123,6 +123,7 @@ public class WarehouseDeviceOutputApplicationService {
 		warehouseDeviceOutput.setComments(request.getComments());
 		warehouseDeviceOutput.setQuantity(request.getQuantity());
 		warehouseDeviceOutput.setUser(user);
+		warehouseDeviceOutput.setWarehouseDevice(warehouseDevice);
 
 		warehouseDevice.setOnHand(onHand);
 		warehouseDevice.getWarehouseDeviceOutputs().add(warehouseDeviceOutput);

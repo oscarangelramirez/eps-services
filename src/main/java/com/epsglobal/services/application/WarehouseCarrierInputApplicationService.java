@@ -135,6 +135,7 @@ public class WarehouseCarrierInputApplicationService {
 		warehouseCarrierInput.setCostByMeter(request.getCostByMeter());
 		warehouseCarrierInput.setProfit(request.getProfit());
 		warehouseCarrierInput.setUser(user);
+		warehouseCarrierInput.setWarehouseCarrier(warehouseCarrier);
 		
 		warehouseCarrier.setOnHandComplete(onHandComplete);
 		warehouseCarrier.setOnHandPartial(onHandPartial);

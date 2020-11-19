@@ -81,8 +81,6 @@ public class BackupApplicationService {
 			Path path = fileStorageLocation.resolve(fileName.toString());
 
 			StringBuilder executeCommand = new StringBuilder();
-//			executeCommand.append(databaseProperties.getPath());
-//			executeCommand.append(File.separator);
 			executeCommand.append(databaseProperties.getCommandBackup());
 			executeCommand.append(" -u ");
 			executeCommand.append(databaseProperties.getUsername());

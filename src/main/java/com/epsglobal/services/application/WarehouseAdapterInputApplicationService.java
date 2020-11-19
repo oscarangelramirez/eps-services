@@ -124,6 +124,7 @@ public class WarehouseAdapterInputApplicationService {
 		warehouseAdapterInput.setQuantity(request.getQuantity());
 		warehouseAdapterInput.setCost(request.getCost());
 		warehouseAdapterInput.setUser(user);
+		warehouseAdapterInput.setWarehouseAdapter(warehouseAdapter);
 
 		warehouseAdapter.setOnHand(onHand);
 		warehouseAdapter.getWarehouseAdapterInputs().add(warehouseAdapterInput);

@@ -9,6 +9,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -31,7 +33,10 @@ public class WarehouseAdapterTransfer {
 	@Enumerated(value = EnumType.STRING)
 	private Status status;
 
-	@ManyToMany(mappedBy = "warehouseAdapterTransfers")
+	@ManyToMany
+	@JoinTable(name = "warehouses_adapters_transfers_relationship", 
+	joinColumns = @JoinColumn(name = "warehouses_adapter_id"), 
+	inverseJoinColumns = @JoinColumn(name = "warehouses_adapters_transfer_id"))
 	private List<WarehouseAdapter> warehouseAdapters;
 
 	@OneToOne

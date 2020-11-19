@@ -35,4 +35,10 @@ public class Warehouse {
 	
 	@OneToMany(mappedBy = "warehouse")
 	private List<WarehouseDirect> warehouseDirects;
+	
+	@OneToMany(mappedBy = "warehouse")
+	private List<WarehouseAdapter> warehouseAdapters;
+	
+	@OneToMany(mappedBy = "warehouse")
+	private List<WarehouseDevice> warehouseDevices;
 }

@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -32,19 +31,13 @@ public class WarehouseDirect {
     @JoinColumn(name = "direct_id")
 	private Direct direct;
 	
-	@OneToMany
-	@JoinColumn(name = "warehouse_direct_id")
+	@OneToMany(mappedBy = "warehouseDirect")
 	private List<WarehouseDirectInput> warehouseDirectInputs;
 	
-	@OneToMany
-	@JoinColumn(name = "warehouse_direct_id")
+	@OneToMany(mappedBy = "warehouseDirect")
 	private List<WarehouseDirectOutput> warehouseDirectOutputs;
 	
-	@ManyToMany
-	@JoinTable(
-	  name = "warehouses_directs_transfers_relationship", 
-	  joinColumns = @JoinColumn(name = "warehouses_direct_id"), 
-	  inverseJoinColumns = @JoinColumn(name = "warehouses_directs_transfer_id"))
+	@ManyToMany(mappedBy = "warehouseDirects")
 	private List<WarehouseDirectTransfer> warehouseDirectTransfers;
 	
 	@Column(nullable = false)

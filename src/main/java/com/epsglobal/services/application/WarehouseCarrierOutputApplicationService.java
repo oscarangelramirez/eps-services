@@ -135,6 +135,7 @@ public class WarehouseCarrierOutputApplicationService {
 		warehouseCarrierOutput.setCostByMeter(request.getCostByMeter());
 		warehouseCarrierOutput.setProfit(request.getProfit());
 		warehouseCarrierOutput.setUser(user);
+		warehouseCarrierOutput.setWarehouseCarrier(warehouseCarrier);
 		
 		warehouseCarrier.setOnHandComplete(onHandComplete);
 		warehouseCarrier.setOnHandPartial(onHandPartial);

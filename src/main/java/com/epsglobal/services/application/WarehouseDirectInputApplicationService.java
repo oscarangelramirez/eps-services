@@ -131,6 +131,7 @@ public class WarehouseDirectInputApplicationService {
 		warehouseDirectInput.setCost(request.getCost());
 		warehouseDirectInput.setProfit(request.getProfit());
 		warehouseDirectInput.setUser(user);
+		warehouseDirectInput.setWarehouseDirect(warehouseDirect);
 		
 		warehouseDirect.setOnHand(onHand);
 		warehouseDirect.getWarehouseDirectInputs().add(warehouseDirectInput);

@@ -9,8 +9,6 @@ import lombok.Data;
 @Component
 @ConfigurationProperties(prefix = "database")
 public class DatabaseProperties {
-
-	private String path;
 	private String backupPath;
 	private String toBackup;
 	private String fileNameBackup;
