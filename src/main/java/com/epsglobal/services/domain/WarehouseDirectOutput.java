@@ -44,10 +44,10 @@ public class WarehouseDirectOutput {
 	@Column(nullable = false)
 	private BigDecimal profit;
 	
-	@OneToOne
-	private User user;
-	
 	@ManyToOne
 	@JoinColumn(name = "warehouse_direct_id")
 	private WarehouseDirect warehouseDirect;
+	
+	@OneToOne
+	private User user;
 }

@@ -161,6 +161,7 @@ public class WarehouseAdapterTransferApplicationService {
 		origin.setQuantity(request.getOrigin().getQuantity());
 		origin.setCost(request.getOrigin().getCost());
 		origin.setWarehouse(warehouseOrigin);
+		origin.setAdapter(adapter);
 		origin.setUser(user);
 
 		WarehouseAdapterTransferPlace destination = new WarehouseAdapterTransferPlace();
@@ -169,6 +170,7 @@ public class WarehouseAdapterTransferApplicationService {
 		destination.setQuantity(null);
 		destination.setCost(request.getDestination().getCost());
 		destination.setWarehouse(warehouseDestination);
+		destination.setAdapter(adapter);
 		destination.setUser(null);
 
 		WarehouseAdapterTransfer warehouseAdapterTransfer = new WarehouseAdapterTransfer();

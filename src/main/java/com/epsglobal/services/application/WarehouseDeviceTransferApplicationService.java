@@ -160,6 +160,7 @@ public class WarehouseDeviceTransferApplicationService {
 		origin.setComments(request.getOrigin().getComments());
 		origin.setQuantity(request.getOrigin().getQuantity());
 		origin.setWarehouse(warehouseOrigin);
+		origin.setDevice(device);
 		origin.setUser(user);
 
 		WarehouseDeviceTransferPlace destination = new WarehouseDeviceTransferPlace();
@@ -167,6 +168,7 @@ public class WarehouseDeviceTransferApplicationService {
 		destination.setComments(null);
 		destination.setQuantity(null);
 		destination.setWarehouse(warehouseDestination);
+		destination.setDevice(device);
 		destination.setUser(null);
 
 		WarehouseDeviceTransfer warehouseDeviceTransfer = new WarehouseDeviceTransfer();

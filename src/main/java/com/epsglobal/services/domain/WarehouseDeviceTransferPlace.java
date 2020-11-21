@@ -31,6 +31,9 @@ public class WarehouseDeviceTransferPlace {
 
 	@OneToOne
 	private Warehouse warehouse;
+	
+	@OneToOne
+	private Device device;
 
 	@OneToOne
 	private User user;

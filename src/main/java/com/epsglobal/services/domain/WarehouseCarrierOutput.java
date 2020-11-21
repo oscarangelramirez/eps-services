@@ -50,10 +50,10 @@ public class WarehouseCarrierOutput {
 	@Column(nullable = false)
 	private BigDecimal profit;
 	
-	@OneToOne
-	private User user;
-	
 	@ManyToOne
 	@JoinColumn(name = "warehouse_carrier_id")
 	private WarehouseCarrier warehouseCarrier;
+	
+	@OneToOne
+	private User user;
 }

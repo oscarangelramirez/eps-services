@@ -158,6 +158,7 @@ public class WarehouseDirectTransferApplicationService {
 		origin.setCost(request.getOrigin().getCost());
 		origin.setProfit(request.getOrigin().getProfit());
 		origin.setWarehouse(warehouseOrigin);
+		origin.setDirect(direct);
 		origin.setUser(user);
 		
 		WarehouseDirectTransferPlace destination = new WarehouseDirectTransferPlace();
@@ -168,6 +169,7 @@ public class WarehouseDirectTransferApplicationService {
 		destination.setCost(request.getDestination().getCost());
 		destination.setProfit(request.getDestination().getProfit());
 		destination.setWarehouse(warehouseDestination);
+		destination.setDirect(direct);
 		destination.setUser(null);
 		
 		WarehouseDirectTransfer warehouseDirectTransfer = new WarehouseDirectTransfer();

@@ -34,10 +34,10 @@ public class WarehouseDeviceOutput {
 	@Column(nullable = true)
 	private Integer quantity;
 
-	@OneToOne
-	private User user;
-	
 	@ManyToOne
 	@JoinColumn(name = "warehouse_device_id")
 	private WarehouseDevice warehouseDevice;
+	
+	@OneToOne
+	private User user;
 }

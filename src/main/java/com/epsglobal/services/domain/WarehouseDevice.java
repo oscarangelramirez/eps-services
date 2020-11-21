@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -38,7 +39,10 @@ public class WarehouseDevice {
 	@OneToMany(mappedBy = "warehouseDevice")
 	private List<WarehouseDeviceOutput> warehouseDeviceOutputs;
 
-	@ManyToMany(mappedBy = "warehouseDevices")
+	@ManyToMany
+	@JoinTable(name = "warehouses_devices_transfers_relationship", 
+	joinColumns = @JoinColumn(name = "warehouses_device_id"), 
+	inverseJoinColumns = @JoinColumn(name = "warehouses_devices_transfer_id"))
 	private List<WarehouseDeviceTransfer> warehouseDeviceTransfers;
 
 	@Column(nullable = true)

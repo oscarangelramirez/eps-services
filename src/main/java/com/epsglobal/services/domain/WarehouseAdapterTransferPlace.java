@@ -35,6 +35,9 @@ public class WarehouseAdapterTransferPlace {
 
 	@OneToOne
 	private Warehouse warehouse;
+	
+	@OneToOne
+	private Adapter adapter;
 
 	@OneToOne
 	private User user;

@@ -49,5 +49,8 @@ public class WarehouseCarrierTransferPlace {
 	private Warehouse warehouse;
 	
 	@OneToOne
+	private Carrier carrier;
+	
+	@OneToOne
 	private User user;
 }

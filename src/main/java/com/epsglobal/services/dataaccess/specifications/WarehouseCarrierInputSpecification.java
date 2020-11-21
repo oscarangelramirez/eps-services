@@ -20,9 +20,9 @@ public class WarehouseCarrierInputSpecification {
         };
     }
 	
-	public static Specification<WarehouseCarrierInput> getByDate(Date initialDate, Date finalDate) {
+	public static Specification<WarehouseCarrierInput> getByDate(Date fromDate, Date toDate) {
         return (root, query, criteriaBuilder) -> {
-            Predicate equalPredicate = criteriaBuilder.between(root.get(WarehouseCarrierInput_.date), initialDate, finalDate);
+            Predicate equalPredicate = criteriaBuilder.between(root.get(WarehouseCarrierInput_.date), fromDate, toDate);
             return equalPredicate;
         };
     }

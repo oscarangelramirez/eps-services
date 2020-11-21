@@ -33,10 +33,7 @@ public class WarehouseDeviceTransfer {
 	@Enumerated(value = EnumType.STRING)
 	private Status status;
 
-	@ManyToMany
-	@JoinTable(name = "warehouses_devices_transfers_relationship", 
-	joinColumns = @JoinColumn(name = "warehouses_device_id"), 
-	inverseJoinColumns = @JoinColumn(name = "warehouses_devices_transfer_id"))
+	@ManyToMany(mappedBy = "warehouseDeviceTransfers")
 	private List<WarehouseDevice> warehouseDevices;
 
 	@OneToOne

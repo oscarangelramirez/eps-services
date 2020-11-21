@@ -37,11 +37,11 @@ public class WarehouseAdapterOutput {
 
 	@Column(nullable = false)
 	private BigDecimal cost;
-
-	@OneToOne
-	private User user;
 	
 	@ManyToOne
 	@JoinColumn(name = "warehouse_adapter_id")
 	private WarehouseAdapter warehouseAdapter;
+	
+	@OneToOne
+	private User user;
 }

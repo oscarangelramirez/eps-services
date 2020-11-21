@@ -43,5 +43,8 @@ public class WarehouseDirectTransferPlace {
 	private Warehouse warehouse;
 	
 	@OneToOne
+	private Direct direct;
+	
+	@OneToOne
 	private User user;
 }

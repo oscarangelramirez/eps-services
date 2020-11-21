@@ -160,6 +160,7 @@ public class WarehouseCarrierTransferApplicationService {
 		origin.setCostByMeter(request.getOrigin().getCostByMeter());
 		origin.setProfit(request.getOrigin().getProfit());
 		origin.setWarehouse(warehouseOrigin);
+		origin.setCarrier(warehouseCarrierOrigin.getCarrier());
 		origin.setUser(user);
 		
 		WarehouseCarrierTransferPlace destination = new WarehouseCarrierTransferPlace();
@@ -172,6 +173,7 @@ public class WarehouseCarrierTransferApplicationService {
 		destination.setCostByMeter(request.getDestination().getCostByMeter());
 		destination.setProfit(request.getDestination().getProfit());
 		destination.setWarehouse(warehouseDestination);
+		destination.setCarrier(warehouseCarrierDestination.getCarrier());
 		destination.setUser(null);
 		
 		WarehouseCarrierTransfer warehouseCarrierTransfer = new WarehouseCarrierTransfer();
