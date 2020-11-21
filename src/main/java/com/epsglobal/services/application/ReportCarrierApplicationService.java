@@ -210,7 +210,6 @@ public class ReportCarrierApplicationService {
 			workbook.write(out);
 			return new ByteArrayInputStream(out.toByteArray());
 		} catch (Exception exception) {
-			exception.printStackTrace();
 			throw new ErrorException(0, "Error generating the report");
 	    }
 	}
